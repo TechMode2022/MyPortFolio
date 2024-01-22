@@ -16,14 +16,14 @@ function Navbar() {
   return (
     <>
       <IconContext.Provider value={iconContextValue}>
-        <div className='navbar'>
+        <div className={`navbar bg-gray-800${sidebar ? 'active' : ''}`}>
           <Link to='#' className='menu-bars icon'>
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
         </div>
-        <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+        <nav className={`nav-menu  bg-gray-800 ${sidebar ? 'active' : ''}`}>
           <ul className='nav-menu-items' onClick={showSidebar}>
-            <li className='navbar-toggle'>
+            <li className='navbar-toggle  bg-gray-800'>
               <Link to='#' className='menu-bars icon'>
                 <AiIcons.AiOutlineClose />
               </Link>
